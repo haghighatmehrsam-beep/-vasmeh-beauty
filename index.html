@@ -4,58 +4,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
 <title>Vasmeh Beauty | آرایشگاه وسمه</title>
+
 <style>
 *{box-sizing:border-box}
-:root{--gold:#d6b36a;--black:#111;--cream:#f7f2e8}
-body{margin:0;background:var(--black);color:white;font-family:Tahoma,sans-serif;line-height:1.9}
-a{text-decoration:none;color:inherit}
-header{padding:18px 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #38332a}
-.logo{font-size:25px;color:var(--gold);font-weight:bold;letter-spacing:2px}
-nav{display:flex;gap:22px;font-size:13px}
+:root{
+--gold:#d8b66b;
+--black:#111;
+--card:#1d1b18;
+--white:#fff;
+}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+background:var(--black);
+color:var(--white);
+font-family:Tahoma,sans-serif;
+line-height:2;
+}
+a{text-decoration:none}
+header{
+position:sticky;
+top:0;
+z-index:10;
+background:#111f;
+backdrop-filter:blur(10px);
+border-bottom:1px solid #493b24;
+padding:12px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{color:var(--gold);font-size:22px;font-weight:bold}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:white;font-size:13px}
 nav a:hover{color:var(--gold)}
-.hero{min-height:570px;padding:90px 8%;display:flex;align-items:center;background:linear-gradient(90deg,#111b,#1119),radial-gradient(ellipse at 75% 40%,#70552c,#17130f 65%)}
+.hero{
+min-height:550px;
+padding:100px 8%;
+display:flex;
+align-items:center;
+background:
+linear-gradient(90deg,#111d,#1119),
+radial-gradient(ellipse at 75% 45%,#73552b,#17130f 65%);
+}
 .hero-content{max-width:650px}
-.tag{color:var(--gold);letter-spacing:3px;font-size:13px}
-h1{font-size:48px;line-height:1.5;margin:15px 0}
+.eyebrow{color:var(--gold);letter-spacing:3px}
+h1{font-size:48px;line-height:1.5;margin:10px 0}
 h1 span{color:var(--gold)}
-.hero p{color:#ddd;font-size:16px}
-.btn{display:inline-block;background:var(--gold);color:#17130f;padding:12px 27px;border-radius:4px;margin-top:20px;font-weight:bold}
-.btn:hover{background:#f0d69e}
-section{padding:75px 7%}
-.section-title{text-align:center;margin-bottom:40px}
-.section-title h2{font-size:30px;color:var(--gold);margin-bottom:5px}
-.section-title p{color:#aaa}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.service{border:1px solid #51452f;padding:28px 20px;text-align:center;border-radius:8px;background:#191714}
-.service .symbol{font-size:35px;color:var(--gold)}
+.hero p{color:#ddd}
+.btn{
+display:inline-block;
+padding:11px 24px;
+border-radius:5px;
+background:var(--gold);
+color:#17130f;
+font-weight:bold;
+margin:8px 5px;
+transition:.2s;
+}
+.btn:hover{background:#f0d69e;transform:translateY(-2px)}
+.btn-outline{
+background:transparent;
+color:var(--gold);
+border:1px solid var(--gold);
+}
+section{padding:70px 7%}
+.heading{text-align:center;margin-bottom:35px}
+.heading h2{color:var(--gold);font-size:29px}
+.heading p{color:#aaa}
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+.service{
+background:var(--card);
+border:1px solid #51452f;
+border-radius:9px;
+padding:25px;
+text-align:center;
+}
+.symbol{font-size:35px;color:var(--gold)}
 .service h3{color:var(--gold)}
 .service p{color:#bbb;font-size:14px}
-.about{background:#1b1915;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.about-art{min-height:300px;border:1px solid var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,#59472a,#17130f 70%);font-size:40px;color:var(--gold)}
-.about h2{color:var(--gold);font-size:29px}
+.about{
+background:#1b1915;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:35px;
+align-items:center;
+}
+.about-art{
+min-height:280px;
+display:flex;
+align-items:center;
+justify-content:center;
+border:1px solid var(--gold);
+border-radius:10px;
+background:radial-gradient(circle,#59472a,#17130f 70%);
+color:var(--gold);
+font-size:30px;
+text-align:center;
+}
+.about h2{color:var(--gold)}
 .about p{color:#ccc}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.gallery-item{height:230px;border:1px solid #51452f;border-radius:8px;background:linear-gradient(145deg,#53452f,#1c1915);display:flex;align-items:center;justify-content:center;color:#e2c98f;text-align:center;padding:10px}
-.contact{background:#1b1915;text-align:center}
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+.gallery-item{
+min-height:190px;
+border:1px solid #51452f;
+border-radius:8px;
+background:linear-gradient(145deg,#53452f,#1c1915);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#e2c98f;
+padding:15px;
+}
+.contact{
+background:#1b1915;
+text-align:center;
+}
 .contact p{color:#ccc}
-.contact-links{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
-.contact-links a{border:1px solid var(--gold);padding:10px 22px;border-radius:5px;color:var(--gold)}
-footer{text-align:center;padding:25px;color:#aaa;border-top:1px solid #38332a;font-size:13px}
+.contact-buttons{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:12px;
+margin-top:25px;
+}
+.contact-buttons .btn{min-width:175px}
+.phone-number{
+direction:ltr;
+color:var(--gold);
+font-size:20px;
+font-weight:bold;
+}
+footer{
+text-align:center;
+padding:25px;
+border-top:1px solid #38332a;
+color:#aaa;
+font-size:13px;
+}
 footer span{color:var(--gold)}
 @media(max-width:650px){
-header{flex-direction:column;gap:10px}
-nav{gap:13px;flex-wrap:wrap;justify-content:center}
-.hero{min-height:460px;padding:65px 7%}
-h1{font-size:34px}
+header{flex-direction:column;gap:8px}
+nav{justify-content:center;gap:12px}
+.hero{min-height:440px;padding:65px 7%}
+h1{font-size:35px}
 .services{grid-template-columns:1fr}
 .about{grid-template-columns:1fr}
 .gallery{grid-template-columns:1fr 1fr}
-.gallery-item{height:160px}
-section{padding:55px 6%}
+.gallery-item{min-height:145px}
+section{padding:50px 6%}
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -70,31 +183,36 @@ section{padding:55px 6%}
 </header>
 
 <main>
+
 <div class="hero" id="home">
 <div class="hero-content">
-<div class="tag">VASMEH BEAUTY SALON</div>
+<div class="eyebrow">VASMEH BEAUTY SALON</div>
 <h1>زیبایی تو، <span>هنر ماست</span></h1>
-<p>به دنیای زیبایی و جذابیت خوش آمدید.
-در آرایشگاه وسمه، زیبایی و سلیقه شما در اولویت ماست.</p>
-<a class="btn" href="#contact">ارتباط و رزرو نوبت</a>
+<p>
+به دنیای زیبایی و جذابیت خوش آمدید.
+در آرایشگاه وسمه، سلیقه و رضایت شما اولویت ماست.
+</p>
+<a class="btn" href="#contact">رزرو نوبت</a>
+<a class="btn btn-outline" href="tel:09196225284">تماس مستقیم</a>
 </div>
 </div>
 
 <section id="services">
-<div class="section-title">
+<div class="heading">
 <h2>خدمات ما</h2>
 <p>زیبایی را با خدمات حرفه‌ای تجربه کنید</p>
 </div>
+
 <div class="services">
 <div class="service">
 <div class="symbol">✦</div>
 <h3>رنگ و لایت مو</h3>
-<p>خدمات رنگ، مش و لایت مو</p>
+<p>رنگ، مش و لایت مو</p>
 </div>
 <div class="service">
 <div class="symbol">✧</div>
 <h3>میکاپ</h3>
-<p>آرایش و میکاپ مناسب سلیقه شما</p>
+<p>آرایش و میکاپ متناسب با سلیقه شما</p>
 </div>
 <div class="service">
 <div class="symbol">❀</div>
@@ -103,13 +221,13 @@ section{padding:55px 6%}
 </div>
 <div class="service">
 <div class="symbol">♡</div>
-<h3>ناخن</h3>
-<p>خدمات زیبایی و طراحی ناخن</p>
+<h3>خدمات ناخن</h3>
+<p>زیبایی و طراحی ناخن</p>
 </div>
 <div class="service">
 <div class="symbol">✿</div>
-<h3>ابرو</h3>
-<p>خدمات زیبایی و مرتب‌سازی ابرو</p>
+<h3>خدمات ابرو</h3>
+<p>زیبایی و مرتب‌سازی ابرو</p>
 </div>
 <div class="service">
 <div class="symbol">✧</div>
@@ -123,37 +241,55 @@ section{padding:55px 6%}
 <div class="about-art">VASMEH ✦ BEAUTY</div>
 <div>
 <h2>درباره آرایشگاه وسمه</h2>
-<p>ما در وسمه تلاش می‌کنیم تجربه‌ای زیبا و دلنشین از خدمات آرایشی و زیبایی برای شما بسازیم.</p>
-<p>زیبایی، ظرافت و رضایت شما هدف ماست.</p>
+<p>
+در وسمه تلاش می‌کنیم تجربه‌ای زیبا و دلنشین از خدمات آرایشی و زیبایی برای شما بسازیم.
+</p>
+<p>
+زیبایی، ظرافت و رضایت شما هدف ماست.
+</p>
 </div>
 </section>
 
 <section id="gallery">
-<div class="section-title">
+<div class="heading">
 <h2>گالری نمونه‌کارها</h2>
 <p>گوشه‌ای از دنیای زیبایی وسمه</p>
 </div>
 <div class="gallery">
-<div class="gallery-item">نمونه کار رنگ مو</div>
-<div class="gallery-item">نمونه کار میکاپ</div>
-<div class="gallery-item">نمونه کار شینیون</div>
-<div class="gallery-item">نمونه کار ناخن</div>
-<div class="gallery-item">نمونه کار ابرو</div>
-<div class="gallery-item">نمونه کار زیبایی</div>
+<div class="gallery-item">نمونه‌کار رنگ مو</div>
+<div class="gallery-item">نمونه‌کار میکاپ</div>
+<div class="gallery-item">نمونه‌کار شینیون</div>
+<div class="gallery-item">نمونه‌کار ناخن</div>
+<div class="gallery-item">نمونه‌کار ابرو</div>
+<div class="gallery-item">نمونه‌کار زیبایی</div>
 </div>
 </section>
 
 <section class="contact" id="contact">
-<div class="section-title">
-  <div class="contact-links">
+<div class="heading">
+<h2>ارتباط با وسمه</h2>
+<p>برای مشاوره و رزرو نوبت با ما تماس بگیرید.</p>
+</div>
+
+<div class="phone-number">09196225284</div>
+
+<div class="contact-buttons">
 <a class="btn" href="tel:09196225284">📞 تماس با وسمه</a>
 
-<a class="btn" href="https://instagram.com/vasmehbeauty021">
+<a class="btn btn-outline"
+href="https://instagram.com/vasmehbeauty021"
+target="_blank" rel="noopener">
 اینستاگرام وسمه
 </a>
-  </div>
-</div
+
+<a class="btn"
+href="https://wa.me/989196225284"
+target="_blank" rel="noopener">
+رزرو از طریق واتساپ
+</a>
+</div>
 </section>
+
 </main>
 
 <footer>
@@ -162,4 +298,4 @@ section{padding:55px 6%}
 
 </body>
   </html>
-
+  
